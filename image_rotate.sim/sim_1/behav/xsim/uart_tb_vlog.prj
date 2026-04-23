@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../image_rotate.srcs/sources_1/new/image_rotate.v" \
+"../../../../image_rotate.srcs/sources_1/new/uart_rx.v" \
+"../../../../image_rotate.srcs/sources_1/new/uart_tx.v" \
+"../../../../image_rotate.srcs/sources_1/new/top_module.v" \
+"../../../../image_rotate.gen/sources_1/ip/bram_out_1/sim/bram_out.v" \
+"../../../../image_rotate.gen/sources_1/ip/bram_in_3/sim/bram_in.v" \
+"../../../../image_rotate.srcs/sim_1/new/image_rotate_tb.v" \
+"../../../../image_rotate.srcs/sim_1/new/uart_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
