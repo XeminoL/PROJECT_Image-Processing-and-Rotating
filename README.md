@@ -1,4 +1,4 @@
-# Logic-design-project  Image Rotation and Mirroring
+# Image Rotation and Mirroring
 ## Requirement
  Design a hardware block to rotate an image by 90° (clockwise/counterclockwise) and to mirror it horizontally or vertically. The design fetches pixels from memory,
 computes new coordinates, and stores the transformed image back.
