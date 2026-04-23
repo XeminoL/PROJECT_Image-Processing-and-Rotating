@@ -1,0 +1,244 @@
+
+*** Running vivado
+    with args -log top_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Thu Nov 27 19:17:49 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_module.tcl -notrace
+create_project: Time (s): cpu = 00:00:27 ; elapsed = 00:01:11 . Memory (MB): peak = 503.555 ; gain = 209.562
+Command: read_checkpoint -auto_incremental -incremental {D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/utils_1/imports/synth_1/top_module.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/utils_1/imports/synth_1/top_module.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_module -part xc7z020clg400-1
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/ip/bram_in/bram_in.xci
+
+INFO: [IP_Flow 19-2162] IP 'bram_in' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'bram_in' (customized with software release 2023.1) has a different revision in the IP Catalog.
+INFO: [IP_Flow 19-2162] IP 'bram_out' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'bram_out' (customized with software release 2023.1) has a different revision in the IP Catalog.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8648
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:41 . Memory (MB): peak = 1273.262 ; gain = 492.789
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_module' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/top_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'image_rotate' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/image_rotate.v:22]
+	Parameter img_x bound to: 256 - type: integer 
+	Parameter img_y bound to: 256 - type: integer 
+	Parameter data bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/image_rotate.v:130]
+INFO: [Synth 8-226] default block is never used [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/image_rotate.v:163]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/image_rotate.v:215]
+INFO: [Synth 8-6155] done synthesizing module 'image_rotate' (0#1) [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/image_rotate.v:22]
+INFO: [Synth 8-6157] synthesizing module 'bram_in' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.runs/synth_1/.Xil/Vivado-16776-DESKTOP-QR593GG/realtime/bram_in_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_in' (0#1) [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.runs/synth_1/.Xil/Vivado-16776-DESKTOP-QR593GG/realtime/bram_in_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addrb' does not match port width (19) of module 'bram_in' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/top_module.v:170]
+INFO: [Synth 8-6157] synthesizing module 'bram_out' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.runs/synth_1/.Xil/Vivado-16776-DESKTOP-QR593GG/realtime/bram_out_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_out' (0#1) [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.runs/synth_1/.Xil/Vivado-16776-DESKTOP-QR593GG/realtime/bram_out_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (19) of module 'bram_out' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/top_module.v:179]
+WARNING: [Synth 8-689] width (16) of port connection 'addrb' does not match port width (19) of module 'bram_out' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/top_module.v:184]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/uart_tx.v:1]
+	Parameter TICKS_PER_BIT bound to: 1085 - type: integer 
+	Parameter TICKS_PER_BIT_SIZE bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/uart_tx.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (0#1) [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/top_module.v:23]
+WARNING: [Synth 8-7137] Register tx_byte_reg in module top_module has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/sources_1/new/top_module.v:118]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:47 . Memory (MB): peak = 1385.926 ; gain = 605.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 1385.926 ; gain = 605.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 1385.926 ; gain = 605.453
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1385.926 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.gen/sources_1/ip/bram_in_3/bram_in/bram_in_in_context.xdc] for cell 'uuut'
+Finished Parsing XDC File [d:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.gen/sources_1/ip/bram_in_3/bram_in/bram_in_in_context.xdc] for cell 'uuut'
+Parsing XDC File [d:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.gen/sources_1/ip/bram_out_1/bram_out/bram_out_in_context.xdc] for cell 'uuuut'
+Finished Parsing XDC File [d:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.gen/sources_1/ip/bram_out_1/bram_out/bram_out_in_context.xdc] for cell 'uuuut'
+Parsing XDC File [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/constrs_1/new/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/constrs_1/new/Arty-Z7-20-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.srcs/constrs_1/new/Arty-Z7-20-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/MyWorks/Logic Design Report/Codes/Logic-design-project-main/image_rotate/image_rotate.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1492.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1492.320 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'uuut' at clock pin 'clka' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'uuuut' at clock pin 'clka' is different from the actual clock period '8.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:01:43 . Memory (MB): peak = 1492.359 ; gain = 711.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:01:43 . Memory (MB): peak = 1492.359 ; gain = 711.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:44 . Memory (MB): peak = 1492.359 ; gain = 711.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'image_rotate'
+INFO: [Synth 8-802] inferred FSM for state register 'currentState_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                            00001 |                              000
+                    READ |                            00010 |                              001
+               WAIT_READ |                            00100 |                              010
+              WRITE_NEXT |                            01000 |                              011
+                    DONE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'image_rotate'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              STATE_IDLE |                            00001 |                            00001
+        STATE_SEND_START |                            00010 |                            00010
+         STATE_SEND_BITS |                            00100 |                            00100
+         STATE_SEND_STOP |                            01000 |                            01000
+              STATE_DONE |                            10000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'currentState_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                          0000001 |                             0000
+            ROTATE_START |                          0000010 |                             0001
+             ROTATE_WAIT |                          0000100 |                             0010
+               SEND_ADDR |                          0001000 |                             0011
+          SEND_WAIT_BRAM |                          0010000 |                             0100
+                 SEND_TX |                          0100000 |                             0101
+                 WAIT_TX |                          1000000 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:01:47 . Memory (MB): peak = 1492.359 ; gain = 711.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 5     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 4     
+	   4 Input   16 Bit        Muxes := 4     
+	   3 Input   16 Bit        Muxes := 2     
+	   7 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 10    
+	   4 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 3     
+	   6 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:02:19 . Memory (MB): peak = 1492.359 ; gain = 711.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:04:16 . Memory (MB): peak = 1602.367 ; gain = 821.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:04:32 . Memory (MB): peak = 1639.750 ; gain = 859.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:04:34 . Memory (MB): peak = 1639.750 ; gain = 859.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------

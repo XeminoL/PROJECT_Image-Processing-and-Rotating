@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Nov 21 12:51:56 2025
+# Process ID: 12264
+# Current directory: D:/VIVADO_workspace/image_rotate/image_rotate.runs/bram_out_synth_1
+# Command line: vivado.exe -log bram_out.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_out.tcl
+# Log file: D:/VIVADO_workspace/image_rotate/image_rotate.runs/bram_out_synth_1/bram_out.vds
+# Journal file: D:/VIVADO_workspace/image_rotate/image_rotate.runs/bram_out_synth_1\vivado.jou
+# Running On: DESKTOP-7IUMTM5, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 23556 MB
+#-----------------------------------------------------------
+source bram_out.tcl -notrace
